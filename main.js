@@ -67,6 +67,9 @@
 
         // Function to calculate and display determinants
         function getDeterminants() {
+
+            document.getElementById('result').innerHTML = "";
+            document.getElementById('step-by-step').innerHTML = "";
             if (!validateInputs()) return; // Validate inputs before proceeding
 
             const matrix = getMatrix(); // Get current matrix
@@ -89,6 +92,8 @@
 
         // Function to solve the matrix using Cramer's rule
         function solve() {
+            document.getElementById('determinants').innerHTML = "";
+
             if (!validateInputs()) return; // Validate inputs before proceeding
 
             const matrix = getMatrix(); // Get current matrix
