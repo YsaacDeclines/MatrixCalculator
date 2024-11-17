@@ -33,9 +33,10 @@ function updateMatrixLabels() {
     const size = parseInt(document.getElementById('matrix-size').value);
     const labelsContainer = document.createElement('div');
     labelsContainer.className = 'matrix-labels';
-    const labels = size === 2 ? ['x', 'y', 'constant'] :
-                   size === 3 ? ['x', 'y', 'z', 'constant'] :
-                   ['x', 'y', 'z', 'w', 'constant'];
+    const labels =  size === 0 ? [] :
+                    size === 2 ? ['x', 'y', 'constant'] :
+                    size === 3 ? ['x', 'y', 'z', 'constant'] :
+                    ['x', 'y', 'z', 'w', 'constant'];
 
     labels.forEach(label => {
         const labelElement = document.createElement('div');
