@@ -70,8 +70,8 @@ function getMatrix() {
 // Function to calculate the determinant of a matrix
 function determinant(matrix) {
     const n = matrix.length; // Get matrix size
-    if (n === 1) return matrix[0][0]; // Base case: 1x1 matrix
-    if (n === 2) return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]; // Base case: 2x2 matrix
+    if (n === 1) return matrix[0][0]; // Base 1x1 matrix
+    if (n === 2) return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]; // 2x2 matrix
 
     let det = 0; // Initialize determinant
     for (let j = 0; j < n; j++) {
@@ -181,7 +181,7 @@ function saveMatrix() {
         try {
             localStorage.setItem(name, JSON.stringify({size, matrix})); // Save matrix to localStorage
             showMessage(`Matrix "${name}" saved successfully.`, 'success'); // Show success message
-        } catch (e) {
+        } catch (e) { // error handling
             showMessage('Failed to save matrix. Storage might be full.', 'error'); // Show error message if save fails
         }
     }
@@ -207,7 +207,7 @@ function loadMatrix() {
             showMessage('Failed to load matrix. Data might be corrupted.', 'error'); // Show error message if load fails
         }
     } else {
-        showMessage(`No matrix found with the name "${name}".`, 'error'); // Show error if matrix not found
+        showMessage(`No matrix found with the name "${name}".`, 'error');
         document.getElementById('matrix-size').value = "0";
         updateMatrixInputs();
     }
@@ -251,8 +251,5 @@ function toggleDevelopersSection() {
         button.textContent = 'Show Developers';
     }
 }
-
-
-
 // Initialize matrix inputs when page loads
 updateMatrixInputs();

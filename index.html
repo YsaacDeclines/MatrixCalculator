@@ -12,7 +12,7 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
     <div class="container">
         <h1>Matrix Calculator<br>(Cramer's Rule)</h1>
-        <!-- Matrix size selection dropdown -->
+        <!-- Matrix size selection -->
         <div class="matrix-size">
             <select id="matrix-size" onchange="updateMatrixInputs()">
                 <option selected value="0">Select Matrix</option>
@@ -21,7 +21,7 @@
                 <option value="4">4x4 Matrix</option>
             </select>
         </div>
-        <!-- Container for matrix input fields -->
+        <!-- Container for matrix inputs -->
         <div id="matrix-inputs" class="matrix-inputs"></div>
         <div class="matrix-actions">
             <!-- Button group for main actions -->
@@ -30,7 +30,7 @@
                 <button onclick="solve()">Solve</button>
                 <button onclick="generateRandomInputs()">Random Inputs</button>
             </div>
-            <!-- Matrix save and load functionality -->
+            <!-- Matrix save and load function -->
             <button onclick="saveMatrix()">Save Matrix</button>
             <div class="matrix-name">
             <input type="text" id="load-matrix-name" placeholder="Enter matrix name to load">
@@ -45,7 +45,6 @@
         <div id="step-by-step"></div>
         <button class="show-developers-btn" onclick="toggleDevelopersSection()">Show Developers</button>
         <!-- Container for developers -->
-        
         <div class="developers-section" id="developers-section">
             <div class="developer-card">
                 <div class="developer-card-front">
