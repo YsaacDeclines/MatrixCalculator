@@ -26,6 +26,7 @@ function updateMatrixInputs() {
         }
         matrixInputs.appendChild(row); // Add row to the matrix inputs container
     }
+    removeResults();
 }
 
 // Function to generate matrix labels
@@ -167,6 +168,11 @@ function generateRandomInputs() {
         input.value = (Math.random() * 20 - 10).toFixed(2); // Set random value between -10 and 10
     });
 
+   removeResults();
+}
+
+// Function to remove existing results
+function removeResults() {
     document.getElementById('determinants').innerHTML='';
     document.getElementById('result').innerHTML='';
     document.getElementById('step-by-step').innerHTML='';
