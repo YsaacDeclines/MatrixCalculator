@@ -203,12 +203,13 @@ function loadMatrix() {
                 });
             });
             showMessage(`Matrix "${name}" loaded successfully.`, 'success'); // Show success message
-        } catch (e) {
+        } catch (e) {   // error handling
             showMessage('Failed to load matrix. Data might be corrupted.', 'error'); // Show error message if load fails
         }
     } else {
         showMessage(`No matrix found with the name "${name}".`, 'error'); // Show error if matrix not found
     }
+    document.getElementById('load-matrix-name').value = "";
 }
 
 // Function to display messages to the user
