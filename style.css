@@ -242,6 +242,8 @@ button:hover {
     height: 300px;
     position: relative;
 }
+
+/* developer card hover state*/
 .developer-card:hover {
     transform: rotateY(180deg);
 }
