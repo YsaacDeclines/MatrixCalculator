@@ -208,8 +208,13 @@ function loadMatrix() {
         }
     } else {
         showMessage(`No matrix found with the name "${name}".`, 'error'); // Show error if matrix not found
+        document.getElementById('matrix-size').value = "0";
+        updateMatrixInputs();
     }
     document.getElementById('load-matrix-name').value = "";
+    document.getElementById('determinants').innerHTML = "";
+    document.getElementById('result').innerHTML = "";
+    document.getElementById('step-by-step').innerHTML = "";
 }
 
 // Function to display messages to the user
