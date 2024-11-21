@@ -3,15 +3,12 @@ function updateMatrixInputs() {
     const size = parseInt(document.getElementById('matrix-size').value); // Get selected matrix size
     const matrixInputs = document.getElementById('matrix-inputs'); // Get container for matrix inputs
     matrixInputs.innerHTML = ''; // Clear existing inputs
-
     // Remove existing labels if any
     const existingLabels = document.querySelector('.matrix-labels');
     if (existingLabels) {
         existingLabels.remove();
     }
-
     updateMatrixLabels();
-
     // Create input fields for the matrix
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div'); // Create a new row
@@ -140,7 +137,6 @@ function solve() {
         return;
     }
 
-    
     const variables = ['X', 'Y', 'Z', 'W'];
     const solutions = []; // Initialize array for solutions
     for (let i = 0; i < n; i++) {
@@ -218,9 +214,7 @@ function loadMatrix() {
         updateMatrixInputs();
     }
     document.getElementById('load-matrix-name').value = "";
-    document.getElementById('determinants').innerHTML = "";
-    document.getElementById('result').innerHTML = "";
-    document.getElementById('step-by-step').innerHTML = "";
+    removeResults();
 }
 
 // Function to display messages to the user
@@ -257,5 +251,3 @@ function toggleDevelopersSection() {
         button.textContent = 'Show Developers';
     }
 }
-// Initialize matrix inputs when page loads
-updateMatrixInputs();
